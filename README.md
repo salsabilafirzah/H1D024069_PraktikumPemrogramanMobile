@@ -1,14 +1,14 @@
-## Identitas
+# Identitas
 
-Nama : Salsabila Firzah  
-NIM : [Isi NIM Anda]  
-Shift KRS : D  
+Nama : Salsabila Firzah Amanina  
+NIM : H1D024069  
+Shift KRS : H  
 Shift Akhir : D  
 
 ---
 
-## Screenshot
+# Screenshot
 
-### Pertemuan 1
+## Pertemuan 1
 
-<img src="Pertemuan 1.jpeg" width="300" alt="Pertemuan 1">
+![Pertemuan 1](./Pertemuan%201.jpeg)
