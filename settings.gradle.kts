@@ -22,4 +22,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Jualan"
 include(":app")
-project(":app").projectDir = file("Pertemuan 1/app")

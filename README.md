@@ -11,4 +11,4 @@ Shift Akhir : D
 
 ### Pertemuan 1
 
-<img src="pertemuan1.jpg" width="300" alt="Pertemuan 1">
+<img src="Pertemuan 1.jpeg" width="300" alt="Pertemuan 1">
