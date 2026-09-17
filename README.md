@@ -17,3 +17,7 @@ Shift Akhir : D
 
 ![Pertemuan 2](./Pertemuan2_Basic.jpeg)
 ![Pertemuan 2](./Pertemuan2_Form.jpeg)
+
+## Pertemuan 2
+
+![Pertemuan 3](./Pertemuan3.jpeg)
