@@ -16,7 +16,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -33,18 +34,55 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.pemmob.salsabilafirzah.ui.screen.BasicInfoScreen
+import com.pemmob.salsabilafirzah.ui.screen.HubungiKamiScreen
 import com.pemmob.salsabilafirzah.ui.theme.JualanTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
+
         setContent {
             JualanTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    LayoutTentangJualan(
-                        modifier = Modifier.padding(innerPadding)
-                    )
+
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+
+                    val navController = rememberNavController()
+
+                    NavHost(
+                        navController = navController,
+                        startDestination = "basic_info"
+                    ) {
+
+                        composable(
+                            route = "basic_info"
+                        ) {
+                            BasicInfoScreen(
+                                onNavigateToContact = {
+                                    navController.navigate(
+                                        route = "form_screen"
+                                    )
+                                }
+                            )
+                        }
+
+                        composable(
+                            route = "form_screen"
+                        ) {
+                            HubungiKamiScreen(
+                                navController = navController
+                            )
+                        }
+                    }
                 }
             }
         }
@@ -52,7 +90,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(
+    name: String,
+    modifier: Modifier = Modifier
+) {
     Text(
         text = "Hello $name!",
         modifier = modifier
@@ -60,11 +101,21 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun LayoutTentangJualan(modifier: Modifier = Modifier) {
+fun LayoutTentangJualan(
+    modifier: Modifier = Modifier
+) {
+
     val context = LocalContext.current
+
     val appIconBitmap = remember(context) {
-        ContextCompat.getDrawable(context, R.mipmap.ic_launcher_round)?.toBitmap()?.asImageBitmap()
-            ?: ContextCompat.getDrawable(context, R.mipmap.ic_launcher)?.toBitmap()?.asImageBitmap()
+        ContextCompat.getDrawable(
+            context,
+            R.mipmap.ic_launcher_round
+        )?.toBitmap()?.asImageBitmap()
+            ?: ContextCompat.getDrawable(
+                context,
+                R.mipmap.ic_launcher
+            )?.toBitmap()?.asImageBitmap()
     }
 
     Column(
@@ -73,6 +124,7 @@ fun LayoutTentangJualan(modifier: Modifier = Modifier) {
             .padding(all = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+
         // Lingkaran Foto/Logo Utama
         Box(
             modifier = Modifier
@@ -81,10 +133,13 @@ fun LayoutTentangJualan(modifier: Modifier = Modifier) {
                 .background(Color.Gray),
             contentAlignment = Alignment.Center
         ) {
+
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+
                 if (appIconBitmap != null) {
+
                     Image(
                         bitmap = appIconBitmap,
                         contentDescription = "Jualan",
@@ -92,6 +147,7 @@ fun LayoutTentangJualan(modifier: Modifier = Modifier) {
                         contentScale = ContentScale.Crop
                     )
                 }
+
                 Text(
                     text = "Jualan",
                     color = Color.White,
@@ -100,7 +156,9 @@ fun LayoutTentangJualan(modifier: Modifier = Modifier) {
             }
         }
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(
+            modifier = Modifier.height(24.dp)
+        )
 
         // Judul Halaman
         Text(
@@ -109,7 +167,9 @@ fun LayoutTentangJualan(modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(
+            modifier = Modifier.height(16.dp)
+        )
 
         // Deskripsi Aplikasi
         Text(
@@ -118,20 +178,24 @@ fun LayoutTentangJualan(modifier: Modifier = Modifier) {
             modifier = Modifier.padding(horizontal = 16.dp)
         )
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(
+            modifier = Modifier.height(32.dp)
+        )
 
-        // Baris Misi (Row dengan Weight)
+        // Baris Misi
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color(0xFFE0E0E0))
                 .padding(all = 16.dp)
         ) {
+
             Text(
                 text = "Misi Kami:",
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.weight(1f)
             )
+
             Text(
                 text = "Memajukan UMKM Lokal",
                 modifier = Modifier.weight(2f)
@@ -143,6 +207,7 @@ fun LayoutTentangJualan(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun LayoutTentangJualanPreview() {
+
     JualanTheme {
         LayoutTentangJualan()
     }
