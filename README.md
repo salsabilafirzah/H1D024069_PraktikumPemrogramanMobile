@@ -20,7 +20,7 @@ Shift Akhir : D
 
 ## Pertemuan 3
 
-<video src="https://raw.githubusercontent.com/salsabilafirzah/H1D024069_PraktikumPemrogramanMobile/main/Pertemuan%203.mp4" controls width="600"></video>
+https://github.com/user-attachments/assets/0e87ce81-cd4c-4530-b556-36d6f9c88246
 
 ## Pertemuan 4
 
