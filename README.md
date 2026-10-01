@@ -20,8 +20,8 @@ Shift Akhir : D
 
 ## Pertemuan 3
 
-https://github.com/salsabilafirzah/H1D024069_PraktikumPemrogramanMobile/blob/main/Pertemuan%203.mp4
+<video src="https://raw.githubusercontent.com/salsabilafirzah/H1D024069_PraktikumPemrogramanMobile/main/Pertemuan%203.mp4" controls width="600"></video>
 
 ## Pertemuan 4
 
-https://github.com/salsabilafirzah/H1D024069_PraktikumPemrogramanMobile/blob/main/Pertemuan%204.mp4
+<video src="https://raw.githubusercontent.com/salsabilafirzah/H1D024069_PraktikumPemrogramanMobile/main/Pertemuan%204.mp4" controls width="600"></video>
