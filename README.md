@@ -24,4 +24,4 @@ https://github.com/user-attachments/assets/0e87ce81-cd4c-4530-b556-36d6f9c88246
 
 ## Pertemuan 4
 
-<video src="https://raw.githubusercontent.com/salsabilafirzah/H1D024069_PraktikumPemrogramanMobile/main/Pertemuan%204.mp4" controls width="600"></video>
+https://github.com/user-attachments/assets/e31d90ae-654a-46b8-8ce5-7822fb9184df
