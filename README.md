@@ -25,3 +25,10 @@ https://github.com/user-attachments/assets/0e87ce81-cd4c-4530-b556-36d6f9c88246
 ## Pertemuan 4
 
 https://github.com/user-attachments/assets/e31d90ae-654a-46b8-8ce5-7822fb9184df
+
+## Pertemuan 5
+
+<p>
+  <img src="./Pertemuan5_1.jpeg" width="280" alt="Pertemuan 5 - Daftar Produk" />
+  <img src="./Pertemuan5_2.jpeg" width="280" alt="Pertemuan 5 - Detail Produk" />
+</p>
